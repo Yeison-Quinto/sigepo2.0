@@ -1,0 +1,31 @@
+.example-icon {
+  padding: 0 16px;
+}
+
+.example-spacer {
+  flex: 2 2 auto;
+}
+
+.example-form-field {
+  width: 200px;
+  padding:20px;
+}
+
+h1{
+  font-size:25px;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.mat-toolbar{
+  height: 100px;
+  max-height: 80px;
+ }
+
+ #footer {
+  position:fixed;
+  right:5px;
+  bottom:0px;
+  height:20px;
+  width:100%;
+}

@@ -1,0 +1,54 @@
+<app-barra></app-barra>
+<div class="container app" style="text-align:center">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center">
+            Agregar proyecto
+        </h1>
+      </div>
+      </div>
+      <mat-horizontal-stepper >
+          <mat-step label="Proyecto">
+
+            <app-info-u></app-info-u>
+
+
+            <br/>
+            <br/>
+            <div class="text-right">
+              <button style ="margin: 10px" mat-raised-button matStepperNext color="primary" >Siguiente</button>
+            </div>
+
+          </mat-step>
+          <mat-step label="Gestores">
+
+            <app-gestores-u></app-gestores-u>
+
+              <br/>
+              <br/>
+              <div class="text-right">
+                  <button style ="margin: 10px" mat-raised-button matStepperPrevious color="primary">Atras</button>
+                  <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+              </div>
+
+            </mat-step>
+          <mat-step label="Informacion">
+
+            <app-vista-u></app-vista-u>
+
+
+              <br/>
+              <br/>
+              <div class="text-right">
+                  <button style ="margin: 10px" mat-raised-button matStepperPrevious color="primary" >Atras</button>
+                  <button mat-raised-button matStepperNext color="warn" (click)="alerta()"  >Guardar</button>
+
+
+
+              </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+
+
+  </div>

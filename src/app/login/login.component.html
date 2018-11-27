@@ -1,0 +1,39 @@
+
+<html>
+          <mat-card class="container app" style="text-align:center">
+             <div class="col-sm-12">
+              <h2> Iniciar sesión </h2>
+            </div>
+            <div class="col-sm-12">
+              <p> Ingrese sus datos de acceso en el sistema MARES</p>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field>
+                  <input matInput placeholder="Usuario" [(ngModel)]="username" username="servicioService.selectedLmodelos.usuario">
+                  <mat-icon matSuffix>perm_identity</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field>
+                  <input matInput placeholder="Contraseña" [(ngModel)]="contrase" type="password" contrase="servicioService.selectedLmodelos.contrase">
+                  <mat-icon matSuffix>vpn_key</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <select matNativeControl required>
+                     <option value="volvo">Español</option>
+                     <option value="saab">Ingles</option>
+                     <option value="mercedes">Aleman</option>
+                     </select>
+                   </mat-form-field>
+                   <br/>
+
+                   <mat-slide-toggle color="primary"> Recordar</mat-slide-toggle>
+
+
+            </div>
+
+            <br/>
+             <a mat-raised-button color="primary" href="admin" >Ingresar</a>
+          </mat-card>
+          </html>

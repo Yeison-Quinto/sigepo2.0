@@ -1,0 +1,55 @@
+<app-barraAdmi></app-barraAdmi>
+
+<div class="container app" style="text-align:center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-center">
+          Gestion de proyectos Guardados
+      </h1>
+    </div>
+    </div>
+    <mat-horizontal-stepper >
+        <mat-step label="Proyecto">
+
+          <app-info-a></app-info-a>
+
+
+          <br/>
+          <br/>
+          <div class="text-right">
+            <button style ="margin: 10px" mat-raised-button matStepperNext color="primary" >Siguiente</button>
+          </div>
+
+        </mat-step>
+        <mat-step label="Gestores">
+
+          <app-gestores-a></app-gestores-a>
+
+            <br/>
+            <br/>
+            <div class="text-right">
+                <button style ="margin: 10px" mat-raised-button matStepperPrevious color="primary">Atras</button>
+                <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+            </div>
+
+          </mat-step>
+        <mat-step label="Informacion">
+
+          <app-vista-a></app-vista-a>
+
+
+            <br/>
+            <br/>
+            <div class="text-right">
+                <button style ="margin: 10px" mat-raised-button matStepperPrevious color="primary" >Atras</button>
+                <button mat-raised-button matStepperNext color="warn" (click)="alerta()"  >Guardar</button>
+
+
+
+            </div>
+          </mat-step>
+      </mat-horizontal-stepper>
+
+
+
+</div>

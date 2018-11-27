@@ -1,0 +1,49 @@
+
+    <mat-toolbar color="primary" class="example-toolbar" >
+
+        <a mat-flat-button href="usuario" color="primary" >
+            <mat-icon>assignment</mat-icon>
+            <h1>SIGEPO</h1>
+          </a>
+
+        <div>
+            <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="Proyec">Proyecto</button>
+            <mat-menu #Proyec="matMenu">
+                <a mat-menu-item href="agregarU" >Crear nuevo proyecto</a>
+                <a mat-menu-item href="editarU" >Actualizar proyecto</a>
+                <a mat-menu-item href="avancesU" >Avances de proyectos</a>
+                <a mat-menu-item href="borrarU" >Borrar proyecto</a>
+            </mat-menu>
+        </div>
+         <div>
+            <button mat-raised-button color="primary" style="margin: 5px" [matMenuTriggerFor]="usuario">Configuación personal</button>
+            <mat-menu #usuario="matMenu">
+                <a mat-menu-item href="editarPerU" >Editar perfil</a>
+                <a mat-menu-item href="" >Historial de acceso</a>
+                </mat-menu>
+        </div>
+
+         <span class="example-spacer"></span>
+         <div>
+             <mat-form-field >
+                <input matInput placeholder="" >
+             </mat-form-field>
+
+              <button mat-raised-button color="primary" style="margin: 10px">Buscar</button>
+         </div>
+
+           <button mat-mini-fab [matMenuTriggerFor]="menu" color="primary">
+             <mat-icon >account_circle</mat-icon>
+           </button>
+           <mat-menu #menu="matMenu">
+              <a mat-menu-item href="editarPerU" >Actualizar</a>
+               <a mat-menu-item href="login" >Cerrar sesion</a>
+             </mat-menu>
+
+    </mat-toolbar>
+
+
+    <div style="text-align:right" id="footer"  >
+             Sistema de gestion de proyecto -- UdeA -- 2018
+    </div>
+

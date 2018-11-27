@@ -1,0 +1,15 @@
+.example-form {
+  min-width: 65%;
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.mat-form-field{
+  margin-right: 30px;
+  min-width: 250px;
+}

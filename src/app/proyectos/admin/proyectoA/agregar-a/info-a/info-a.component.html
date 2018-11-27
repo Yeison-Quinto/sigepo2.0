@@ -1,0 +1,59 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre Proyecto" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Tipo Proyecto" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Modadlidad Proyecto" >
+  </mat-form-field>
+
+  <p>
+    <mat-form-field>
+      <input matInput [matDatepicker]="dp1" placeholder="Fecha de creacion" >
+      <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+      <mat-datepicker #dp1></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="dp2" placeholder="Fecha Inicio" >
+      <mat-datepicker-toggle matSuffix [for]="dp2" ></mat-datepicker-toggle>
+      <mat-datepicker #dp2 ></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="dp3" placeholder="Fecha Final" >
+      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+      <mat-datepicker #dp3></mat-datepicker>
+    </mat-form-field>
+  </p>
+
+  <mat-form-field class="example-full-width">
+    <select matNativeControl required>
+     <option value="volvo">Estado del Proyecto</option>
+     <option value="saab">Activo</option>
+     <option value="mercedes">Inactivo</option>
+     <option value="mercedes">Otro</option>
+     </select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Objetivo general del Proyecto"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Objetivo especifico del Proyecto"></textarea>
+  </mat-form-field>
+
+
+
+
+
+
+</form>
+
+
+

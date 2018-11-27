@@ -1,0 +1,117 @@
+<app-barraAdmi></app-barraAdmi>
+
+<div class="container app" style="text-align:center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-center">
+          Agregar proyecto
+      </h1>
+    </div>
+    </div>
+
+  <br/>
+</div>
+
+  <div class="container">
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          
+        
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="nomProyecto">
+            <th mat-header-cell *matHeaderCellDef> Nombre del P. </th>
+            <td mat-cell *matCellDef="let element"> {{element.nomProyecto}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="tipoProyecto">
+            <th mat-header-cell *matHeaderCellDef> Tipo </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipoProyecto}} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="modalidad">
+            <th mat-header-cell *matHeaderCellDef> Modalidad </th>
+            <td mat-cell *matCellDef="let element"> {{element.modalidad}} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="fCreacion">
+            <th mat-header-cell *matHeaderCellDef> F. Creacion </th>
+            <td mat-cell *matCellDef="let element"> {{element.fCreacion}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="fInicial">
+            <th mat-header-cell *matHeaderCellDef> F. inical</th>
+            <td mat-cell *matCellDef="let element"> {{element.fInicial}} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="fFinal">
+            <th mat-header-cell *matHeaderCellDef> F. final</th>
+            <td mat-cell *matCellDef="let element"> {{element.fFinal}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="estado">
+              <th mat-header-cell *matHeaderCellDef> Estado</th>
+              <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+            </ng-container>
+        
+          <ng-container matColumnDef="objGenenrar">
+                <th mat-header-cell *matHeaderCellDef> Objetivo G</th>
+                <td mat-cell *matCellDef="let element"> {{element.objGenenrar}} </td>
+              </ng-container>
+          
+          <ng-container matColumnDef="objEspecifico">
+                <th mat-header-cell *matHeaderCellDef> Objetivo E </th>
+                <td mat-cell *matCellDef="let element"> {{element.objEspecifico}} </td>
+              </ng-container>
+        
+          <ng-container matColumnDef="nomAsesor">
+                <th mat-header-cell *matHeaderCellDef> Asesor </th>
+                <td mat-cell *matCellDef="let element"> {{element.nomAsesor}} </td>
+              </ng-container>
+        
+          <ng-container matColumnDef="nomRespomsable">
+                <th mat-header-cell *matHeaderCellDef> Responsable </th>
+                <td mat-cell *matCellDef="let element"> {{element.nomRespomsable}} </td>
+              </ng-container>
+          
+          <ng-container matColumnDef="nomParticipante">
+                <th mat-header-cell *matHeaderCellDef> participante </th>
+                <td mat-cell *matCellDef="let element"> {{element.nomParticipante}} </td>
+              </ng-container>
+        
+          <ng-container matColumnDef="rol">
+                <th mat-header-cell *matHeaderCellDef> Rol </th>
+                <td mat-cell *matCellDef="let element"> {{element.rol}} </td>
+              </ng-container>
+        
+          <ng-container matColumnDef="dependencia">
+                <th mat-header-cell *matHeaderCellDef> Rol </th>
+                <td mat-cell *matCellDef="let element"> {{element.dependencia}} </td>
+              </ng-container>
+
+        
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table> 
+        
+
+  </div>
+
+  
